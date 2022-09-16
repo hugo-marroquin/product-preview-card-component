@@ -1,0 +1,141 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary-colors */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /* neutral-colors */
+  --verydark-blue: hsl(212, 21%, 14%);
+  --darkgrayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  /* fonts */
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Fraunces", serif;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--main-font);
+  color: var(--darkgrayish-blue);
+  background: var(--cream);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 4rem;
+}
+
+.card-wrapper {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 60rem;
+  max-height: 45rem;
+}
+
+/* img section */
+.img-section {
+  min-width: 50%;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* main section */
+.main-section {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3.5rem;
+}
+
+.main-section .category {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.main-section .title,
+.main-section .main-price {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 3.1rem;
+}
+
+.main-section .title {
+  color: var(--verydark-blue);
+  line-height: 1;
+}
+
+.main-section .main-price {
+  color: var(--dark-cyan);
+}
+
+.main-section .disc-price {
+  font-size: 1.4rem;
+  color: var(--darkgrayish-blue);
+  text-decoration: line-through;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-section .btn {
+  font-weight: 700;
+  padding: 1.5rem 0;
+  background: var(--dark-cyan);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-section .btn:hover {
+  cursor: pointer;
+  background: hsl(159, 35%, 21%);
+}
+
+/* attribution */
+.attribution {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--darkgrayish-blue);
+}
+
+@media (max-width: 37.5rem) {
+  .card-wrapper {
+    flex-direction: column;
+    max-width: 45rem;
+    max-height: 60rem;
+  }
+  .img-section {
+    min-height: 50%;
+  }
+}
